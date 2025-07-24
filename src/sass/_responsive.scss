@@ -1,0 +1,140 @@
+// max-width: 980px
+@media only screen and (max-width: $bp-medium) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'head'
+      'list'
+      'recipe';
+    grid-template-rows: 10rem minmax(50rem, auto) 1fr;
+  }
+
+  .header {
+    padding: 0 4rem;
+  }
+
+  .search-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: max-content;
+    padding: 2rem;
+    gap: 2rem;
+    overflow-y: scroll;
+
+    .results {
+      grid-column: 1 / -1;
+    }
+
+    .pagination {
+      grid-column: 1 / -1;
+      margin-top: 2rem;
+    }
+
+    .copyright {
+      grid-column: 1 / -1;
+      justify-self: center;
+      margin-top: 2rem;
+    }
+  }
+
+  .recipe {
+    &__details {
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+      padding: 5rem 4rem 3.5rem 4rem;
+    }
+
+    &__info:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &__ingredients {
+      padding: 4rem 6rem;
+    }
+
+    &__directions {
+      padding: 4rem 6rem;
+    }
+  }
+
+  .add-recipe-window {
+    width: 90vw;
+  }
+}
+
+// max-width: 600px
+@media only screen and (max-width: $bp-small) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    grid-template-rows: auto minmax(50rem, auto) 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2.5rem 0;
+  }
+
+  .search-results {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe {
+    &__fig {
+      height: 28rem;
+    }
+    &__title {
+      font-size: 2.75rem;
+      width: 80%;
+    }
+    &__details {
+      gap: 3rem;
+      padding: 4rem 3rem 3rem 3rem;
+    }
+    &__ingredients {
+      padding: 3.5rem 4rem;
+    }
+    &__directions {
+      padding: 3.5rem 4rem;
+    }
+    &__ingredient-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .upload {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    &__column {
+      grid-template-columns: 1fr 3.5fr;
+    }
+  }
+}
+
+// max-width: 500px
+@media only screen and (max-width: $bp-smallest) {
+  .bookmarks {
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+  .add-recipe-window {
+    padding: 4rem;
+    width: 100vw;
+    border-radius: 0;
+    height: 100%;
+  }
+  .upload {
+    &__column {
+      grid-template-columns: 1fr;
+      label {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
