@@ -8,13 +8,21 @@ export default class View {
     this._parentElement.innerHTML = '';
   }
 
-  // Render new data or show error if data is invalid
-  render(data) {
+  /**
+   * Render the received object to the DOM
+   * @param {Object | Object[]} data The data to be rendered (e.g. recipe)
+   * @param {boolean} [render=true] If false, create markup string instead of rendering to the DOM
+   * @returns {undefined | string } A markup string is returned if render is false
+   * @this {object} View instance
+   * @author Darkoray
+   */
+  render(data, render = true) {
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
 
     this._data = data;
     const markup = this._generateMarkup();
+    if (!render) return markup;
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
