@@ -1,5 +1,5 @@
 ## VS Code settings
-# .vscode/
+.vscode/
 
 ## Node modules
 node_modules/
@@ -29,5 +29,5 @@ Thumbs.db
 
 ## Other
 .cache/
-.parcel-cache/
+# .parcel-cache/
 coverage/
