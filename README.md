@@ -1,4 +1,4 @@
-# 🍴 Forkify App
+# 🍴 Forkify App [![wakatime](https://wakatime.com/badge/github/Darkoray/forkify-app.svg)](https://wakatime.com/badge/github/Darkoray/forkify-app)
 
 This is a recipe search app built during the [**"The Complete JavaScript Course 2025: From Zero to Expert!"**](https://www.udemy.com/the-complete-javascript-course/?couponCode=C3GITHUB10) by **Jonas Schmedtmann**.
 
